@@ -1,0 +1,27 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="topMargin">10dp</dimen>
+    <dimen name="topMargin2">20dp</dimen>
+    <dimen name="topMargin3">30dp</dimen>
+    <dimen name="widthScoreBtns">72dp</dimen>
+    <dimen name="textScoreBtns">30sp</dimen>
+    <dimen name="teamWidth">145dp</dimen>
+    <dimen name="teamWidth2">160dp</dimen>
+    <dimen name="btnTextSize">20sp</dimen>
+    <dimen name="btnMargin">10dp</dimen>
+    <dimen name="dashSize">30sp</dimen>
+    <dimen name="totalPtsText">25sp</dimen>
+    <dimen name="sepText">50sp</dimen>
+    <dimen name="penCon">2dp</dimen>
+    <dimen name="buttonWidth">72dp</dimen>
+    <dimen name="buttonWidth2">100dp</dimen>
+    <dimen name="subtractHeight">40dp</dimen>
+    <dimen name="seperator">16dp</dimen>
+    <dimen name="seperator1">15dp</dimen>
+    <dimen name="timerButtons">50dp</dimen>
+    <dimen name="timerText">12sp</dimen>
+    <dimen name="hintText">10sp</dimen>
+    <dimen name="totalText">35sp</dimen>
+</resources>
