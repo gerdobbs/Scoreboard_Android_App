@@ -8,72 +8,36 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/sky"
-    tools:context="com.dobbs.ger.scores.MainActivity">
+    tools:context="com.dobbs.ger.scores.MainActivity"
+    tools:ignore="Overdraw">
 
     <TextView
         android:id="@+id/homeTeam"
-        android:layout_width="@dimen/teamWidth"
+        android:layout_width="@dimen/teamWidth2"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/topMargin"
         android:layout_marginLeft="@dimen/btnMargin"
         android:layout_marginStart="@dimen/btnMargin"
         android:text="@string/home"
-        android:textSize="@dimen/btnTextSize"
-        android:gravity="start" />
+        android:textSize="@dimen/btnTextSize"/>
     <TextView
         android:id="@+id/awayTeam"
-        android:layout_width="@dimen/teamWidth"
+        android:layout_width="@dimen/teamWidth2"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/topMargin"
         android:layout_marginRight="@dimen/btnMargin"
         android:layout_marginEnd="@dimen/btnMargin"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:textSize="@dimen/btnTextSize"
         android:text="@string/away"
-        android:gravity="end" />
+        android:gravity="end"/>
     <TextView
-        android:id="@+id/totalHomePoints"
-        android:layout_width="@dimen/buttonWidth"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/homeTeam"
-        android:layout_alignLeft="@id/homeTeam"
-        android:layout_alignStart="@id/homeTeam"
-        android:layout_alignRight="@id/homeTeam"
-        android:layout_alignEnd="@id/homeTeam"
-        android:layout_marginTop="@dimen/topMargin"
-        android:text="@string/zero"
-        android:gravity="center"
-        android:textStyle="bold|italic"
-        android:textSize="@dimen/totalText" />
-    <TextView
-        android:id="@+id/totalAwayPoints"
-        android:layout_width="@dimen/buttonWidth"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/topMargin"
-        android:layout_below="@id/awayTeam"
-        android:layout_alignLeft="@id/awayTeam"
-        android:layout_alignStart="@id/awayTeam"
-        android:layout_alignRight="@id/awayTeam"
-        android:layout_alignEnd="@id/awayTeam"
-        android:text="@string/zero"
-        android:gravity="center"
-        android:textStyle="bold|italic"
-        android:textSize="@dimen/totalText"/>
-    <TextView
-        android:id="@+id/homePointsText"
+        android:id="@+id/gaaPage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/homeTeam"
-        android:layout_alignLeft="@id/homeTeam"
-        android:layout_alignStart="@id/homeTeam"
-        android:layout_alignRight="@id/awayTeam"
-        android:layout_alignEnd="@id/awayTeam"
-        android:layout_alignBaseline="@id/totalHomePoints"
-        android:text="@string/totalPts"
-        android:textStyle="bold|italic"
-        android:textSize="@dimen/totalPtsText"
-        android:gravity="center" />
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/gaaText"
+        android:textColor="@color/colorPrimary"/>
     <Button
         android:id="@+id/homeGoals"
         android:layout_width="@dimen/widthScoreBtns"
@@ -81,8 +45,7 @@
         android:ems="10"
         android:layout_alignLeft="@id/homeTeam"
         android:layout_alignStart="@id/homeTeam"
-        android:layout_below="@id/totalHomePoints"
-        android:layout_marginTop="@dimen/topMargin3"
+        android:layout_below="@id/homeTeam"
         android:text="@string/zero"
         android:textStyle="bold|italic"
         android:textSize="@dimen/textScoreBtns"
@@ -92,40 +55,37 @@
         android:layout_width="@dimen/widthScoreBtns"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:layout_below="@id/totalHomePoints"
-        android:layout_alignRight="@id/homeTeam"
-        android:layout_alignEnd="@id/homeTeam"
-        android:layout_marginTop="@dimen/topMargin3"
         android:text="@string/dblZero"
+        android:gravity="center"
         android:textStyle="bold|italic"
         android:textSize="@dimen/textScoreBtns"
-        android:gravity="center" />
-    <Button
-        android:id="@+id/awayGoals"
-        android:layout_width="@dimen/widthScoreBtns"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/topMargin3"
-        android:ems="10"
-        android:layout_below="@id/totalAwayPoints"
-        android:layout_alignLeft="@id/awayTeam"
-        android:layout_alignStart="@id/awayTeam"
-        android:text="@string/zero"
-        android:textStyle="bold|italic"
-        android:textSize="@dimen/textScoreBtns"
-        android:gravity="center" />
+        android:layout_below="@id/homeTeam"
+        android:layout_toRightOf="@id/homeGoals"
+        android:layout_toEndOf="@id/homeGoals"/>
     <Button
         android:id="@+id/awayPoints"
         android:layout_width="@dimen/widthScoreBtns"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/topMargin3"
         android:ems="10"
-        android:layout_below="@id/totalAwayPoints"
+        android:layout_below="@id/homeTeam"
         android:layout_alignRight="@id/awayTeam"
         android:layout_alignEnd="@id/awayTeam"
         android:text="@string/dblZero"
+        android:gravity="center"
+        android:textStyle="bold|italic"
+        android:textSize="@dimen/textScoreBtns"/>
+    <Button
+        android:id="@+id/awayGoals"
+        android:layout_width="@dimen/widthScoreBtns"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:text="@string/zero"
         android:textStyle="bold|italic"
         android:textSize="@dimen/textScoreBtns"
-        android:gravity="center" />
+        android:gravity="center"
+        android:layout_below="@id/homeTeam"
+        android:layout_toLeftOf="@id/awayPoints"
+        android:layout_toStartOf="@id/awayPoints"/>
     <Button
         android:id="@+id/subtractHomeGoalButton"
         android:layout_width="wrap_content"
@@ -135,8 +95,7 @@
         android:layout_alignLeft="@id/homeGoals"
         android:layout_alignStart="@id/homeGoals"
         android:layout_alignRight="@id/homeGoals"
-        android:layout_alignEnd="@id/homeGoals"
-        android:layout_marginTop="@dimen/topMargin"/>
+        android:layout_alignEnd="@id/homeGoals"/>
     <Button
         android:id="@+id/subtractHomePointButton"
         android:layout_width="wrap_content"
@@ -146,8 +105,18 @@
         android:layout_alignLeft="@id/homePoints"
         android:layout_alignStart="@id/homePoints"
         android:layout_alignRight="@id/homePoints"
-        android:layout_alignEnd="@id/homePoints"
-        android:layout_marginTop="@dimen/topMargin"/>
+        android:layout_alignEnd="@id/homePoints"/>
+    <TextView
+        android:id="@+id/totalHomePoints"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_toRightOf="@id/homeTeam"
+        android:layout_toEndOf="@id/homeTeam"
+        android:text="@string/zero"
+        android:gravity="end"
+        android:textStyle="bold|italic"
+        android:textSize="@dimen/textScoreBtns" />
     <Button
         android:id="@+id/subtractAwayGoalButton"
         android:layout_width="wrap_content"
@@ -157,8 +126,7 @@
         android:layout_alignLeft="@id/awayGoals"
         android:layout_alignStart="@id/awayGoals"
         android:layout_alignRight="@id/awayGoals"
-        android:layout_alignEnd="@id/awayGoals"
-        android:layout_marginTop="@dimen/topMargin"/>
+        android:layout_alignEnd="@id/awayGoals"/>
     <Button
         android:id="@+id/subtractAwayPointButton"
         android:layout_width="wrap_content"
@@ -168,19 +136,40 @@
         android:layout_alignRight="@id/awayPoints"
         android:layout_alignEnd="@id/awayPoints"
         android:layout_alignLeft="@id/awayPoints"
-        android:layout_alignStart="@id/awayPoints"
-        android:layout_marginTop="@dimen/topMargin"/>
+        android:layout_alignStart="@id/awayPoints"/>
+    <TextView
+        android:id="@+id/totalAwayPoints"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_toLeftOf="@id/awayTeam"
+        android:layout_toStartOf="@id/awayTeam"
+        android:text="@string/zero"
+        android:gravity="start"
+        android:textStyle="bold|italic"
+        android:textSize="@dimen/textScoreBtns"/>
     <Button
         android:id="@+id/rugby"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/homeGoals"
-        android:layout_alignStart="@id/homeGoals"
+        android:layout_alignLeft="@id/homeTeam"
+        android:layout_alignStart="@id/homeTeam"
         android:layout_alignRight="@id/homePoints"
         android:layout_alignEnd="@id/homePoints"
         android:layout_alignParentBottom="true"
         android:text="@string/rugbyLabel"
         android:textSize="@dimen/timerText"/>
+    <ImageButton
+        android:id="@+id/start"
+        android:layout_width="@dimen/buttonWidth2"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_above="@id/rugby"
+        android:layout_alignRight="@id/homePoints"
+        android:layout_alignEnd="@id/homePoints"
+        android:layout_alignLeft="@id/homeGoals"
+        android:layout_alignStart="@id/homeGoals"
+        android:contentDescription="@string/start"/>
     <Button
         android:id="@+id/ResetButton"
         android:layout_width="wrap_content"
@@ -188,92 +177,78 @@
         android:text="@string/reset"
         android:textSize="@dimen/timerText"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="@dimen/topMargin2"
         android:layout_alignRight="@id/awayPoints"
         android:layout_alignEnd="@id/awayPoints"
         android:layout_alignLeft="@id/awayGoals"
         android:layout_alignStart="@id/awayGoals"/>
     <TextView
-        android:id="@+id/help"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/ResetButton"
-        android:text="@string/timer"
-        android:gravity="center"
-        android:textSize="@dimen/hintText"/>
-    <ImageButton
-        android:id="@+id/start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/help"
-        android:layout_alignRight="@id/homeGoals"
-        android:layout_alignEnd="@id/homeGoals"
-        android:layout_alignLeft="@id/homeGoals"
-        android:layout_alignStart="@id/homeGoals"
-        android:layout_marginTop="@dimen/topMargin3"
-        android:layout_marginBottom="@dimen/topMargin"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/start"/>
-    <ImageButton
-        android:id="@+id/stop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/help"
-        android:layout_alignLeft="@id/awayPoints"
-        android:layout_alignStart="@id/awayPoints"
-        android:layout_alignRight="@id/awayPoints"
-        android:layout_alignEnd="@id/awayPoints"
-        android:layout_marginTop="@dimen/topMargin3"
-        android:layout_marginBottom="@dimen/topMargin"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/start"/>
-    <TextView
         android:id="@+id/timerSep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/help"
+        android:layout_above="@id/ResetButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/seperator"
+        android:layout_alignBaseline="@id/minsView"
         android:text="@string/sep"
-        android:textSize="@dimen/dashSize"
-        android:gravity="start"/>
+        android:textSize="@dimen/textScoreBtns"
+        android:gravity="center" />
     <Button
         android:id="@+id/minsView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toLeftOf="@id/timerSep"
-        android:layout_toStartOf="@id/timerSep"
-        android:layout_above="@id/help"
-        android:layout_marginRight="@dimen/topMargin"
-        android:layout_marginEnd="@dimen/topMargin"
-        android:layout_marginTop="@dimen/topMargin3"
         android:text="@string/dblZero"
         android:textSize="@dimen/textScoreBtns"
-        android:gravity="end"/>
+        android:layout_above="@id/rugby"
+        android:layout_toRightOf="@id/start"
+        android:layout_toEndOf="@id/start"
+        android:layout_marginLeft="@dimen/topMargin3"
+        android:layout_marginStart="@dimen/topMargin3"
+        android:gravity="end" />
     <Button
         android:id="@+id/secsView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/timerSep"
-        android:layout_toEndOf="@id/timerSep"
-        android:layout_marginLeft="@dimen/topMargin"
-        android:layout_marginStart="@dimen/topMargin"
-        android:layout_above="@id/help"
+        android:layout_toLeftOf="@id/stop"
+        android:layout_toStartOf="@id/stop"
+        android:gravity="start"
+        android:layout_above="@id/ResetButton"
+        android:layout_marginTop="@dimen/topMargin3"
+        android:layout_marginRight="@dimen/topMargin3"
+        android:layout_marginEnd="@dimen/topMargin3"
         android:text="@string/dblZero"
-        android:textSize="@dimen/textScoreBtns"
-        android:gravity="start"/>
+        android:textSize="@dimen/textScoreBtns" />
+    <ImageButton
+        android:id="@+id/stop"
+        android:layout_width="@dimen/buttonWidth2"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_above="@id/ResetButton"
+        android:layout_alignLeft="@id/awayGoals"
+        android:layout_alignStart="@id/awayGoals"
+        android:layout_alignRight="@id/awayPoints"
+        android:layout_alignEnd="@id/awayPoints"
+        android:foregroundGravity="right"
+        android:contentDescription="@string/stop"/>
     <TextView
-        android:id="@+id/gaaPage"
+        android:id="@+id/pointsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@id/homeTeam"
-        android:layout_alignStart="@id/homeTeam"
-        android:layout_alignRight="@id/awayTeam"
-        android:layout_alignEnd="@id/awayTeam"
+        android:layout_toRightOf="@id/totalHomePoints"
+        android:layout_toEndOf="@id/totalHomePoints"
+        android:layout_toLeftOf="@id/totalAwayPoints"
+        android:layout_toStartOf="@id/totalAwayPoints"
+        android:text="@string/totalPts"
+        android:textStyle="bold|italic"
+        android:textSize="@dimen/totalPtsText"
         android:gravity="center"
-        android:text="@string/gaaText"
-        android:textSize="@dimen/timerText"
-        android:textColor="@color/colorPrimary"/>
+        android:layout_alignBaseline="@id/totalHomePoints"/>
+    <TextView
+        android:id="@+id/help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/minsView"
+        android:layout_marginTop="@dimen/topMargin"
+        android:text="@string/timer"
+        android:textSize="@dimen/hintText"
+        android:gravity="center"/>
 
 </RelativeLayout>
