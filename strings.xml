@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Scores</string>
+    <string name="home">My Team</string>
+    <string name="away">Opponents</string>
+    <string name="zero">0</string>
+    <string name="dblZero">00</string>
+    <string name="dash">-</string>
+    <string name="totalPts">pts</string>
+    <string name="rugbyLabel">Rugby Scores</string>
+    <string name="reset">Reset Scores</string>
+    <string name="sep">:</string>
+    <string name="gaaText">GAA</string>
+    <string name="rugbyText">Rugby</string>
+    <string name="Try">Try</string>
+    <string name="gaa">GAA SCORES</string>
+    <string name="pen">Pen</string>
+    <string name="con">Con.</string>
+    <string name="triesText">Tries</string>
+    <string name="pensText">Penalties/Drop</string>
+    <string name="consText">Conversions</string>
+    <string name="timer">(Click on timer to set duration of half)</string>
+    <string name="blank"> </string>
+    <string name="start">Start Button</string>
+    <string name="stop">Stop Button</string>
+    <string name="pause">Pause Button</string>
+</resources>
